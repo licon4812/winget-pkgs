@@ -1,0 +1,31 @@
+# Created with YamlCreate.ps1 v2.2.1 $debug=NVS1.CRLF.5-1-22621-963.Win32NT
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.2.0.schema.json
+
+PackageIdentifier: PCSX2.PCSX2.Stable
+PackageVersion: 1.6.0
+PackageLocale: en-US
+Publisher: PCSX2 Team
+PublisherUrl: https://pcsx2.net
+# PublisherSupportUrl:
+PrivacyUrl: https://pcsx2.net/privacy
+Author: PCSX2 Team
+PackageName: PCSX2 - Playstation 2 Emulator
+PackageUrl: https://pcsx2.net
+License: Freeware
+# LicenseUrl:
+Copyright: Copyright © 2022 PCSX2. All Rights Reserved.
+# CopyrightUrl:
+ShortDescription: PCSX2 is a free and open-source PlayStation 2 (PS2) emulator. Its purpose is to emulate the PS2's hardware, using a combination of MIPS CPU Interpreters, Recompilers and a Virtual Machine which manages hardware states and PS2 system memory.
+# Description:
+Moniker: pcsx2
+Tags:
+- pcsx
+- pcsx2
+# Agreements:
+# ReleaseNotes:
+# ReleaseNotesUrl:
+# PurchaseUrl:
+# InstallationNotes:
+# Documentations:
+ManifestType: defaultLocale
+ManifestVersion: 1.2.0

@@ -1,0 +1,18 @@
+# Created with YamlCreate.ps1 v2.2.1 $debug=NVS1.CRLF.5-1-22621-963.Win32NT
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.2.0.schema.json
+
+PackageIdentifier: PCSX2.PCSX2.Stable
+PackageVersion: 1.6.0
+InstallerLocale: en-US
+InstallerType: exe
+InstallerSwitches:
+  Silent: /S
+  SilentWithProgress: /S
+UpgradeBehavior: uninstallPrevious
+ReleaseDate: 2020-05-07
+Installers:
+- Architecture: x86
+  InstallerUrl: https://github.com/PCSX2/pcsx2/releases/download/v1.6.0/pcsx2-v1.6.0-windows-32bit-installer.exe
+  InstallerSha256: FBE07D1AFD27AB353DAA2AFACC2DE87D8F5EC69F64BBD9246F31EBFE1731DE9B
+ManifestType: installer
+ManifestVersion: 1.2.0
