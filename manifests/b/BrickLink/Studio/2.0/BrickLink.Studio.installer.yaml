@@ -1,4 +1,4 @@
-# Automatically updated by the winget bot at 2022/Oct/28
+# Automatically updated by the winget bot at 2022/Dec/09
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.2.0.schema.json
 
 PackageIdentifier: BrickLink.Studio
@@ -10,6 +10,6 @@ InstallerSwitches:
 Installers:
 - Architecture: x64
   InstallerUrl: https://s3.amazonaws.com/blstudio/Studio2.0/Studio+2.0.exe
-  InstallerSha256: 0BB827A351D7C4C21B2F7BD3C5C1D3002312327F8A91C7F4F0409A6610D4E379
+  InstallerSha256: F99D3DE1DD6BCDC0E8430258570AC82A7060642A4BA8A58A25D34CA2D944BFCD
 ManifestType: installer
 ManifestVersion: 1.2.0
