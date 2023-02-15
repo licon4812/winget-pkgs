@@ -1,0 +1,17 @@
+# Created with YamlCreate.ps1 v2.2.0 using InputObject 🤖 $debug=QUSU.CRLF..7-2-9
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.2.0.schema.json
+
+PackageIdentifier: KDE.Dolphin
+PackageVersion: 22.12.2
+MinimumOSVersion: 10.0.0.0
+InstallerType: nullsoft
+Scope: machine
+InstallModes:
+- interactive
+- silent
+Installers:
+- Architecture: x64
+  InstallerUrl: https://binary-factory.kde.org/view/Windows%2064-bit/job/Dolphin_Release_win64/1816/artifact/dolphin-22.12.2-1816-windows-cl-msvc2019-x86_64.exe
+  InstallerSha256: 4B7063BBB18C1C95E8D1DB4957A323A392B9238673B3F4A8501E264C03956ADF
+ManifestType: installer
+ManifestVersion: 1.2.0
