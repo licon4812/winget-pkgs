@@ -95,7 +95,7 @@
           {
             "name": "addReply",
             "parameters": {
-              "comment": "Hello @${issueAuthor},\n\nThe package manager bot determined that the metadata was not compliant.\n\nPlease verify the manifest file is compliant with the package manager [1.2 manifest specification](https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.2.0).\nMake sure the ID is of the form publisher.appname and that the folder structure is manifests\\partition\\publisher\\appname\\version.\nNote: The path and \"PackageIdentifier\" are case sensitive.\nBe sure to use a tool like [VSCode](https://code.visualstudio.com/) to make sure the manifest YAML syntax is correct.\n\nYou could also try our [Windows Package Manager Manifest Creator](https://github.com/microsoft/winget-create) or the [YamlCreate script](https://github.com/microsoft/winget-pkgs/blob/master/doc/tools/YamlCreate.md).\n\nFor details on the specific error, see the details link below in the build pipeline.\n\nTemplate: msftbot/validationError/manifest/metadata"
+              "comment": "Hello @${issueAuthor},\n\nThe package manager bot determined that the metadata was not compliant.\n\nPlease verify the manifest file is compliant with the package manager [1.4 manifest specification](https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.4.0).\nMake sure the ID is of the form publisher.appname and that the folder structure is manifests\\partition\\publisher\\appname\\version.\nNote: The path and \"PackageIdentifier\" are case sensitive.\n\nBe sure to use a tool like [VSCode](https://code.visualstudio.com/) to make sure the manifest YAML syntax is correct.\n\nYou could also try our [Windows Package Manager Manifest Creator](https://github.com/microsoft/winget-create) or the [YamlCreate script](https://github.com/microsoft/winget-pkgs/blob/master/doc/tools/YamlCreate.md).\n\nFor details on the specific error, see the details link below in the build pipeline.\n\nTemplate: msftbot/validationError/manifest/metadata"
             }
           },
           {
@@ -1468,7 +1468,7 @@
               "parameters": {
                 "bodyPattern": "/block",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[bB]locking[\\s-][iI]ssue"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[bB]locking[\\s-][iI]ssue"
               }
             },
             {
@@ -1585,7 +1585,7 @@
               "parameters": {
                 "bodyPattern": "/block",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[bB]locking[\\s-][iI]ssue"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[bB]locking[\\s-][iI]ssue"
               }
             },
             {
@@ -1696,7 +1696,7 @@
               "parameters": {
                 "bodyPattern": "/dep",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[dD]ependencies"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[dD]ependencies"
               }
             },
             {
@@ -1781,25 +1781,7 @@
           {
             "name": "addLabel",
             "parameters": {
-              "label": "Needs-Author-Feedback"
-            }
-          },
-          {
-            "name": "removeLabel",
-            "parameters": {
-              "label": "Needs-Attention"
-            }
-          },
-          {
-            "name": "addLabel",
-            "parameters": {
               "label": "Dependencies"
-            }
-          },
-          {
-            "name": "addLabel",
-            "parameters": {
-              "label": "Blocking-Issue"
             }
           }
         ]
@@ -1819,7 +1801,7 @@
               "parameters": {
                 "bodyPattern": "/dep",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[dD]ependencies"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[dD]ependencies"
               }
             },
             {
@@ -1902,21 +1884,9 @@
         "taskName": "Helper to add dependencies to Issue",
         "actions": [
           {
-            "name": "removeLabel",
-            "parameters": {
-              "label": "Needs-Author-Feedback"
-            }
-          },
-          {
             "name": "addLabel",
             "parameters": {
               "label": "Dependencies"
-            }
-          },
-          {
-            "name": "addLabel",
-            "parameters": {
-              "label": "Blocking-Issue"
             }
           }
         ]
@@ -1936,7 +1906,7 @@
               "parameters": {
                 "bodyPattern": "/ext",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[aA]rea[\\s-][eE]xternal"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[aA]rea[\\s-][eE]xternal"
               }
             },
             {
@@ -2053,7 +2023,7 @@
               "parameters": {
                 "bodyPattern": "/ssue",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[iI]nstaller[\\s-][iI]ssue"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[iI]nstaller[\\s-][iI]ssue"
               }
             },
             {
@@ -2164,7 +2134,7 @@
               "parameters": {
                 "bodyPattern": "/ssue",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[iI]nstaller[\\s-][iI]ssue"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[iI]nstaller[\\s-][iI]ssue"
               }
             },
             {
@@ -2263,6 +2233,12 @@
             "parameters": {
               "label": "Installer-Issue"
             }
+          },
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "Area-External"
+            }
           }
         ]
       }
@@ -2281,7 +2257,7 @@
               "parameters": {
                 "bodyPattern": "/ext",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[aA]rea[\\s-][eE]xternal"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[aA]rea[\\s-][eE]xternal"
               }
             },
             {
@@ -2386,7 +2362,7 @@
               "parameters": {
                 "bodyPattern": "/inter",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[iI]nteractive[\\s-][oO]nly([\\s-][iI]nstaller)?"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[iI]nteractive[\\s-][oO]nly([\\s-][iI]nstaller)?"
               }
             },
             {
@@ -2471,25 +2447,7 @@
           {
             "name": "addLabel",
             "parameters": {
-              "label": "Needs-Author-Feedback"
-            }
-          },
-          {
-            "name": "removeLabel",
-            "parameters": {
-              "label": "Needs-Attention"
-            }
-          },
-          {
-            "name": "addLabel",
-            "parameters": {
               "label": "Interactive-Only-Installer"
-            }
-          },
-          {
-            "name": "addLabel",
-            "parameters": {
-              "label": "Blocking-Issue"
             }
           }
         ]
@@ -2509,7 +2467,7 @@
               "parameters": {
                 "bodyPattern": "/inter",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[iI]nteractive[\\s-][oO]nly([\\s-][iI]nstaller)?"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[iI]nteractive[\\s-][oO]nly([\\s-][iI]nstaller)?"
               }
             },
             {
@@ -2595,246 +2553,6 @@
             "name": "addLabel",
             "parameters": {
               "label": "Interactive-Only-Installer"
-            }
-          },
-          {
-            "name": "addLabel",
-            "parameters": {
-              "label": "Blocking-Issue"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "taskType": "trigger",
-      "capabilityId": "IssueResponder",
-      "subCapability": "PullRequestCommentResponder",
-      "version": "1.0",
-      "config": {
-        "conditions": {
-          "operator": "and",
-          "operands": [
-            {
-              "name": "commentContains",
-              "parameters": {
-                "bodyPattern": "/zip",
-                "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+\\.?[zZ]ip"
-              }
-            },
-            {
-              "operator": "or",
-              "operands": [
-                {
-                  "name": "activitySenderHasPermissions",
-                  "parameters": {
-                    "permissions": "admin"
-                  }
-                },
-                {
-                  "name": "activitySenderHasPermissions",
-                  "parameters": {
-                    "permissions": "write"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "ImJoakim"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "ItzLevvie"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "jedieaston"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "KaranKad"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "OfficialEsco"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "quhxl"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "Trenly"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "mdanish-kh"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "russellbanks"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "eventType": "pull_request",
-        "eventNames": [
-          "issue_comment"
-        ],
-        "taskName": "Helper to add Interactive-Only-Installer to PR",
-        "actions": [
-          {
-            "name": "addLabel",
-            "parameters": {
-              "label": "Needs-Author-Feedback"
-            }
-          },
-          {
-            "name": "removeLabel",
-            "parameters": {
-              "label": "Needs-Attention"
-            }
-          },
-          {
-            "name": "addLabel",
-            "parameters": {
-              "label": ".zip"
-            }
-          },
-          {
-            "name": "addLabel",
-            "parameters": {
-              "label": "Blocking-Issue"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "taskType": "trigger",
-      "capabilityId": "IssueResponder",
-      "subCapability": "IssueCommentResponder",
-      "version": "1.0",
-      "config": {
-        "conditions": {
-          "operator": "and",
-          "operands": [
-            {
-              "name": "commentContains",
-              "parameters": {
-                "bodyPattern": "/zip",
-                "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+\\.?[zZ]ip"
-              }
-            },
-            {
-              "operator": "or",
-              "operands": [
-                {
-                  "name": "activitySenderHasPermissions",
-                  "parameters": {
-                    "permissions": "admin"
-                  }
-                },
-                {
-                  "name": "activitySenderHasPermissions",
-                  "parameters": {
-                    "permissions": "write"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "ImJoakim"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "ItzLevvie"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "jedieaston"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "KaranKad"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "OfficialEsco"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "quhxl"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "Trenly"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "mdanish-kh"
-                  }
-                },
-                {
-                  "name": "isActivitySender",
-                  "parameters": {
-                    "user": "russellbanks"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "eventType": "issue",
-        "eventNames": [
-          "issue_comment"
-        ],
-        "taskName": "Helper to add .zip to Issue",
-        "actions": [
-          {
-            "name": "addLabel",
-            "parameters": {
-              "label": ".zip"
-            }
-          },
-          {
-            "name": "addLabel",
-            "parameters": {
-              "label": "Blocking-Issue"
             }
           }
         ]
@@ -2993,7 +2711,7 @@
               "parameters": {
                 "bodyPattern": "/feedback",
                 "isRegex": true,
-                "commentPattern": "@[mM][sS][fF][tT][bB][oO][tT]\\s+[rR]eset\\s+[fF]eedback"
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[rR]eset\\s+[fF]eedback"
               }
             },
             {
@@ -3351,6 +3069,341 @@
             "name": "removeLabel",
             "parameters": {
               "label": "Needs-Author-Feedback"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "taskType": "trigger",
+      "capabilityId": "IssueResponder",
+      "subCapability": "PullRequestCommentResponder",
+      "version": "1.0",
+      "config": {
+        "conditions": {
+          "operator": "and",
+          "operands": [
+            {
+              "name": "commentContains",
+              "parameters": {
+                "bodyPattern": "/zip",
+                "isRegex": true,
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[zZ]ip[\\s-][bB]inary"
+              }
+            },
+            {
+              "operator": "or",
+              "operands": [
+                {
+                  "name": "activitySenderHasPermissions",
+                  "parameters": {
+                    "permissions": "admin"
+                  }
+                },
+                {
+                  "name": "activitySenderHasPermissions",
+                  "parameters": {
+                    "permissions": "write"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "ImJoakim"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "ItzLevvie"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "jedieaston"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "KaranKad"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "OfficialEsco"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "quhxl"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "Trenly"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "mdanish-kh"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "russellbanks"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "eventType": "pull_request",
+        "eventNames": [
+          "issue_comment"
+        ],
+        "taskName": "Helper to add zip-binary to PR",
+        "actions": [
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "zip-binary"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "taskType": "trigger",
+      "capabilityId": "IssueResponder",
+      "subCapability": "IssueCommentResponder",
+      "version": "1.0",
+      "config": {
+        "conditions": {
+          "operator": "and",
+          "operands": [
+            {
+              "name": "commentContains",
+              "parameters": {
+                "bodyPattern": "/zip",
+                "isRegex": true,
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[zZ]ip[\\s-][bB]inary"
+              }
+            },
+            {
+              "operator": "or",
+              "operands": [
+                {
+                  "name": "activitySenderHasPermissions",
+                  "parameters": {
+                    "permissions": "admin"
+                  }
+                },
+                {
+                  "name": "activitySenderHasPermissions",
+                  "parameters": {
+                    "permissions": "write"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "ImJoakim"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "ItzLevvie"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "jedieaston"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "KaranKad"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "OfficialEsco"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "quhxl"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "Trenly"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "mdanish-kh"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "russellbanks"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "eventType": "issue",
+        "eventNames": [
+          "issue_comment"
+        ],
+        "taskName": "Helper to add zip-binary to Issue",
+        "actions": [
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "zip-binary"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "taskType": "trigger",
+      "capabilityId": "IssueResponder",
+      "subCapability": "PullRequestCommentResponder",
+      "version": "1.0",
+      "config": {
+        "conditions": {
+          "operator": "and",
+          "operands": [
+            {
+              "name": "commentContains",
+              "parameters": {
+                "bodyPattern": "/att",
+                "isRegex": true,
+                "commentPattern": "\\[[Pp]olicy\\]\\s+[Nn]eeds[\\s-][Aa]ttention"
+              }
+            },
+            {
+              "operator": "or",
+              "operands": [
+                {
+                  "name": "activitySenderHasPermissions",
+                  "parameters": {
+                    "permissions": "admin"
+                  }
+                },
+                {
+                  "name": "activitySenderHasPermissions",
+                  "parameters": {
+                    "permissions": "write"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "ImJoakim"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "ItzLevvie"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "jedieaston"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "KaranKad"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "OfficialEsco"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "quhxl"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "Trenly"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "mdanish-kh"
+                  }
+                },
+                {
+                  "name": "isActivitySender",
+                  "parameters": {
+                    "user": "russellbanks"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "eventType": "pull_request",
+        "eventNames": [
+          "issue_comment"
+        ],
+        "taskName": "Helper to aassign PR to On-Call",
+        "actions": [
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "Needs-Attention"
+            }
+          },
+          {
+            "name": "assignToIcmUserGroup",
+            "parameters": {
+              "groupId": "61b7eb27cfff4b19dc1a8ec7",
+              "assignmentTarget": "Primary"
+            }
+          },
+          {
+            "name": "assignToIcmUserGroup",
+            "parameters": {
+              "groupId": "61b7eb27cfff4b19dc1a8ec7",
+              "assignmentTarget": "FirstBackup"
+            }
+          },
+          {
+            "name": "addReply",
+            "parameters": {
+              "comment": "Hello ${issueAuthor},\n\nYour pull request requires attention from a repository administrator. It has been assigned to a developer for review.\n\nTemplate: msftbot/manualReview"
             }
           }
         ]
@@ -5045,7 +5098,7 @@
                 {
                   "name": "isActivitySender",
                   "parameters": {
-                    "user": "msftbot"
+                    "user": "microsoft-github-policy-service[bot]"
                   }
                 }
               ]
@@ -5079,6 +5132,12 @@
             "name": "removeLabel",
             "parameters": {
               "label": "Validation-Hash-Verification-Failed"
+            }
+          },
+          {
+            "name": "removeLabel",
+            "parameters": {
+              "label": "Validation-Merge-Conflict"
             }
           },
           {
@@ -5780,7 +5839,7 @@
           {
             "name": "addReply",
             "parameters": {
-              "comment": "Hello @${issueAuthor},\n\nWe've identified this Issue as a duplicate of another one that already exists. This specific instance is being closed in favor of tracking the concern over on the referenced Issue. Thanks for your report! Be sure to add your 👍 to the other issue to help raise the priority.\n\nTemplate: msftbot/duplicate/closed"
+              "comment": "Hello @${issueAuthor},\n\nWe've identified this Issue as a duplicate of another one that already exists. This specific instance is being closed in favor of tracking the concern over on the referenced Issue. Thanks for your report! Be sure to add your 👍 to the issue to help raise the priority and avoid posting \"Me too!\" messages to respect those who have subscribed to the issue.\n\nTemplate: msftbot/duplicate/closed"
             }
           },
           {
@@ -6160,6 +6219,10 @@
           "project_card"
         ],
         "taskName": "Respond to PR author regarding the Validation-Domain error",
+        "dangerZone": {
+          "respondToBotActions": true,
+          "acceptRespondToBotActions": true
+        },
         "actions": [
           {
             "name": "addReply",
@@ -6194,7 +6257,7 @@
             {
               "name": "labelAdded",
               "parameters": {
-                "label": ".zip"
+                "label": "Dependencies"
               }
             }
           ]
@@ -6205,18 +6268,34 @@
           "issues",
           "project_card"
         ],
-        "taskName": "Blocked by .zip",
+        "taskName": "Blocked by Dependencies",
+        "dangerZone": {
+          "respondToBotActions": true,
+          "acceptRespondToBotActions": true
+        },
         "actions": [
           {
             "name": "addReply",
             "parameters": {
-              "comment": "Hello @${issueAuthor},\n\nThis package appears to reference a compressed .zip archive rather than an installer.\n\nThis PR is blocked until support for .zip is implemented in:\n* microsoft/winget-cli/issues/140\n\nTemplate: msftbot/blockingIssue/zipInstaller"
+              "comment": "Hello @${issueAuthor},\n\nThis package appears to require dependencies in order to install successfully.\n\nThis PR is blocked until support for dependencies is implemented in:\n* microsoft/winget-cli/issues/163\n\nBe sure to add your 👍 to the issue to help raise the priority and avoid posting \"Me too!\" messages to respect those who have subscribed to the issue.\n\nTemplate: msftbot/blockingIssue/dependencySupport"
             }
           },
           {
             "name": "addLabel",
             "parameters": {
               "label": "Blocking-Issue"
+            }
+          },
+          {
+            "name": "removeLabel",
+            "parameters": {
+              "label": "Needs-Attention"
+            }
+          },
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "Needs-Author-Feedback"
             }
           }
         ]
@@ -6225,7 +6304,7 @@
     {
       "taskType": "trigger",
       "capabilityId": "IssueResponder",
-      "subCapability": "PullRequestResponder",
+      "subCapability": "IssuesOnlyResponder",
       "version": "1.0",
       "config": {
         "conditions": {
@@ -6239,18 +6318,23 @@
             }
           ]
         },
-        "eventType": "pull_request",
+        "eventType": "issue",
         "eventNames": [
           "pull_request",
           "issues",
+          "issue_comment",
           "project_card"
         ],
-        "taskName": "Blocked by Dependencies",
+        "taskName": "Blocked by Dependencies on Issues",
+        "dangerZone": {
+          "respondToBotActions": true,
+          "acceptRespondToBotActions": true
+        },
         "actions": [
           {
             "name": "addReply",
             "parameters": {
-              "comment": "Hello @${issueAuthor},\n\nThis package appears to require dependencies in order to install successfully.\n\nThis PR is blocked until support for dependencies is implemented in:\n* microsoft/winget-cli/issues/163\n\nTemplate: msftbot/blockingIssue/dependencySupport"
+              "comment": "Hello @${issueAuthor},\n\nThis package appears to require dependencies in order to install successfully.\n\nThis package is blocked until support for dependencies is implemented in:\n* microsoft/winget-cli/issues/163\n\nBe sure to add your 👍 to the issue to help raise the priority and avoid posting \"Me too!\" messages to respect those who have subscribed to the issue.\n\nTemplate: msftbot/blockingIssue/dependencySupport"
             }
           },
           {
@@ -6286,11 +6370,173 @@
           "project_card"
         ],
         "taskName": "Blocked by Interactive Only Installer",
+        "dangerZone": {
+          "respondToBotActions": true,
+          "acceptRespondToBotActions": true
+        },
+        "actions": [
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "Needs-Author-Feedback"
+            }
+          },
+          {
+            "name": "removeLabel",
+            "parameters": {
+              "label": "Needs-Attention"
+            }
+          },
+          {
+            "name": "addReply",
+            "parameters": {
+              "comment": "Hello @${issueAuthor},\n\nThis package appears to require user interaction to install.\n\nThis PR is blocked until support for interactive installer search filtering is implemented in:\n* microsoft/winget-cli/issues/823\n\nBe sure to add your 👍 to the issue to help raise the priority and avoid posting \"Me too!\" messages to respect those who have subscribed to the issue.\n\nTemplate: msftbot/blockingIssue/interactiveOnlyInstall"
+            }
+          },
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "Blocking-Issue"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "taskType": "trigger",
+      "capabilityId": "IssueResponder",
+      "subCapability": "IssuesOnlyResponder",
+      "version": "1.0",
+      "config": {
+        "conditions": {
+          "operator": "and",
+          "operands": [
+            {
+              "name": "labelAdded",
+              "parameters": {
+                "label": "Interactive-Only-Installer"
+              }
+            }
+          ]
+        },
+        "eventType": "issue",
+        "eventNames": [
+          "pull_request",
+          "issues",
+          "issue_comment",
+          "project_card"
+        ],
+        "taskName": "Blocked by Interactive Only Installer Issues",
+        "dangerZone": {
+          "respondToBotActions": true,
+          "acceptRespondToBotActions": true
+        },
         "actions": [
           {
             "name": "addReply",
             "parameters": {
-              "comment": "Hello @${issueAuthor},\n\nThis package appears to require user interaction to install.\n\nThis PR is blocked until support for interactive installer search filtering is implemented in:\n* microsoft/winget-cli/issues/823\n\nTemplate: msftbot/blockingIssue/interactiveOnlyInstall"
+              "comment": "Hello @${issueAuthor},\n\nThis package appears to require user interaction to install.\n\nThis package is blocked until support for interactive installer search filtering is implemented in:\n* microsoft/winget-cli/issues/823\n\nBe sure to add your 👍 to the issue to help raise the priority and avoid posting \"Me too!\" messages to respect those who have subscribed to the issue.\n\nTemplate: msftbot/blockingIssue/interactiveOnlyInstall"
+            }
+          },
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "Blocking-Issue"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "taskType": "trigger",
+      "capabilityId": "IssueResponder",
+      "subCapability": "PullRequestResponder",
+      "version": "1.0",
+      "config": {
+        "conditions": {
+          "operator": "and",
+          "operands": [
+            {
+              "name": "labelAdded",
+              "parameters": {
+                "label": "zip-binary"
+              }
+            }
+          ]
+        },
+        "eventType": "pull_request",
+        "eventNames": [
+          "pull_request",
+          "issues",
+          "project_card"
+        ],
+        "taskName": "Blocked by Zipped Binaries",
+        "dangerZone": {
+          "respondToBotActions": true,
+          "acceptRespondToBotActions": true
+        },
+        "actions": [
+          {
+            "name": "addReply",
+            "parameters": {
+              "comment": "Hello @${issueAuthor},\n\nThis package appears to depend on .dlls that aren't available via symlink.\n\nThis PR is blocked until support for zipped binaries is implemented in:\n* microsoft/winget-cli/issues/2711\n\nBe sure to add your 👍 to the issue to help raise the priority and avoid posting \"Me too!\" messages to respect those who have subscribed to the issue.\n\nTemplate: msftbot/blockingIssue/zipBinary"
+            }
+          },
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "Blocking-Issue"
+            }
+          },
+          {
+            "name": "addLabel",
+            "parameters": {
+              "label": "Needs-Author-Feedback"
+            }
+          },
+          {
+            "name": "removeLabel",
+            "parameters": {
+              "label": "Needs-Attention"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "taskType": "trigger",
+      "capabilityId": "IssueResponder",
+      "subCapability": "IssuesOnlyResponder",
+      "version": "1.0",
+      "config": {
+        "conditions": {
+          "operator": "and",
+          "operands": [
+            {
+              "name": "labelAdded",
+              "parameters": {
+                "label": "zip-binary"
+              }
+            }
+          ]
+        },
+        "eventType": "issue",
+        "eventNames": [
+          "pull_request",
+          "issues",
+          "issue_comment",
+          "project_card"
+        ],
+        "taskName": "Blocked by Zipped Binaries Issue",
+        "dangerZone": {
+          "respondToBotActions": true,
+          "acceptRespondToBotActions": true
+        },
+        "actions": [
+          {
+            "name": "addReply",
+            "parameters": {
+              "comment": "Hello @${issueAuthor},\n\nThis package appears to depend on .dlls that aren't available via symlink.\n\nThis package is blocked until support for zipped binaries is implemented in:\n* microsoft/winget-cli/issues/2711\n\nBe sure to add your 👍 to the issue to help raise the priority and avoid posting \"Me too!\" messages to respect those who have subscribed to the issue.\n\nTemplate: msftbot/blockingIssue/zipBinary"
             }
           },
           {
@@ -6378,12 +6624,16 @@
           "project_card"
         ],
         "taskName": "Blocked by specific Hardware Requirements",
+        "dangerZone": {
+          "respondToBotActions": true,
+          "acceptRespondToBotActions": true
+        },
         "actions": [
           {
             "name": "addReply",
             "parameters": {
               "label": "Blocking-Issue",
-              "comment": "Hello @${issueAuthor},\n\nThis package appears to require specific hardware.\n\nThis PR is blocked until support for specific hardware requirements is implemented in:\n* microsoft/winget-cli/issues/1417\n\nTemplate: msftbot/blockingIssue/hardwareDependency"
+              "comment": "Hello @${issueAuthor},\n\nThis package appears to require specific hardware.\n\nThis PR is blocked until support for specific hardware requirements is implemented in:\n* microsoft/winget-cli/issues/1417\n\nBe sure to add your 👍 to the issue to help raise the priority and avoid posting \"Me too!\" messages to respect those who have subscribed to the issue.\n\nTemplate: msftbot/blockingIssue/hardwareDependency"
             }
           },
           {
@@ -6588,7 +6838,7 @@
           {
             "name": "addReply",
             "parameters": {
-              "comment": "Hello @${issueAuthor},\n\nThe package manager bot determined that the ManifestVersion key does not match any version  currently approved for release.Please verify the manifest file is compliant with the package manager [1.0 manifest specification](https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.0.0), [1.1 manifest specification](https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.1.0), or [1.2 manifest specification](https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.2.0).\n\nFor details on the specific error, see the details link below in the build pipeline.\n\nTemplate: msftbot/validationError/manifest/version"
+              "comment": "Hello @${issueAuthor},\n\nThe package manager bot determined that the ManifestVersion key does not match any version  currently approved for release.Please verify the manifest file is compliant with the package manager [1.0 manifest specification](https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.0.0), [1.1 manifest specification](https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.1.0), [1.2 manifest specification](https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.2.0), or [1.4 manifest specification](https://github.com/microsoft/winget-pkgs/tree/master/doc/manifest/schema/1.4.0).\n\nFor details on the specific error, see the details link below in the build pipeline.\n\nTemplate: msftbot/validationError/manifest/version"
             }
           },
           {
