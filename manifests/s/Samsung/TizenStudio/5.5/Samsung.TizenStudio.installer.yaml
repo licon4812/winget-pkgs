@@ -15,7 +15,7 @@ UpgradeBehavior: install
 ReleaseDate: 2023-10-30
 Installers:
 - Architecture: x64
-  InstallerUrl: https://developer.tizen.org/development/tizen-studio/download#
-  InstallerSha256: 24085382302D9EC3A8CBE0BFBEEAB4C969B2E6C437271E8ED5A1562C087640D4
+  InstallerUrl: https://download.tizen.org/sdk/Installer/tizen-studio_5.5/web-ide_Tizen_Studio_5.5_windows-64.exe
+  InstallerSha256: 7b91d37e6920b999f1fc7d6a2d907bcad5d1a8737efba038ce88216a4019f779
 ManifestType: installer
 ManifestVersion: 1.5.0
