@@ -1,0 +1,28 @@
+# Created with YamlCreate.ps1 v2.2.12 $debug=NVS1.CRLF.5-1-22621-2506.Win32NT
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.5.0.schema.json
+
+PackageIdentifier: Samsung.TizenStudio
+PackageVersion: "5.5"
+PackageLocale: en-US
+Publisher: Samsung
+# PublisherUrl: 
+# PublisherSupportUrl: 
+PrivacyUrl: https://www.tizen.org/about/privacy-policy
+# Author: 
+PackageName: Tizen Studio
+PackageUrl: https://developer.tizen.org/development/tizen-studio/download
+License: Creative Commons Attribution 3.0
+# LicenseUrl: 
+Copyright: © 2012 Tizen Project, a Linux Foundation Project. All Rights Reserved. Linux is a registered trademark of Linus Torvalds.
+# CopyrightUrl: 
+ShortDescription: The Tizen Studio is a comprehensive set of tools for developing Tizen native and Web applications. It consists of an IDE, Emulator, toolchain, sample code, and documentation.
+Description: The Tizen Studio is a comprehensive set of tools for developing Tizen native and Web applications. It consists of an IDE, Emulator, toolchain, sample code, and documentation. Tizen Studio runs on Windows®, Ubuntu and macOS. Tizen applications can be developed without relying on the official Tizen Studio, as long as the application complies with the Tizen packaging rules.
+Moniker: tizen
+# Tags: 
+# ReleaseNotes: 
+# ReleaseNotesUrl: 
+# PurchaseUrl: 
+# InstallationNotes: 
+# Documentations: 
+ManifestType: defaultLocale
+ManifestVersion: 1.5.0

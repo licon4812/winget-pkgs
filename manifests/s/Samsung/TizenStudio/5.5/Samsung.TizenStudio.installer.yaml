@@ -1,0 +1,21 @@
+# Created with YamlCreate.ps1 v2.2.12 $debug=NVS1.CRLF.5-1-22621-2506.Win32NT
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.5.0.schema.json
+
+PackageIdentifier: Samsung.TizenStudio
+PackageVersion: "5.5"
+InstallerLocale: en-US
+InstallerType: exe
+InstallModes:
+- interactive
+- silent
+InstallerSwitches:
+  Silent: /S
+  SilentWithProgress: /S
+UpgradeBehavior: install
+ReleaseDate: 2023-10-30
+Installers:
+- Architecture: x64
+  InstallerUrl: https://developer.tizen.org/development/tizen-studio/download#
+  InstallerSha256: 24085382302D9EC3A8CBE0BFBEEAB4C969B2E6C437271E8ED5A1562C087640D4
+ManifestType: installer
+ManifestVersion: 1.5.0
