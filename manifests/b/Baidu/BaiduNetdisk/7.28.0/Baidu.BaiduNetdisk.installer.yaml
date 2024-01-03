@@ -1,4 +1,4 @@
-# Created with YamlCreate.ps1 v2.2.5 $debug=QUSU.CRLF.7-3-4.Win32NT
+# Created with Komac v1.6.0
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.4.0.schema.json
 
 PackageIdentifier: Baidu.BaiduNetdisk
@@ -10,7 +10,7 @@ InstallerSuccessCodes:
 UpgradeBehavior: install
 Protocols:
 - baiduyunguanjia
-ReleaseDate: 2023-05-09
+ReleaseDate: 2023-05-05
 Installers:
 - Architecture: x86
   InstallerUrl: https://issuepcdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.28.0.5.exe
