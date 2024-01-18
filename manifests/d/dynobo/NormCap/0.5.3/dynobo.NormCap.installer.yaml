@@ -1,0 +1,21 @@
+# Created using WinGet Automation (CLI)
+
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.5.0.schema.json
+
+PackageIdentifier: dynobo.NormCap
+PackageVersion: 0.5.3
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/dynobo/normcap/releases/download/v0.5.3/NormCap-0.5.3-x86_64-Windows.msi
+  InstallerSha256: be32fea5626033ae9b1ae9a9d89586a245a815492b608c6e09782b3588d66d6f
+  UpgradeCode: "{63EE06C1-0030-59D7-A5AE-31B45FC8261A}"
+ManifestType: installer
+ManifestVersion: 1.5.0
+InstallerLocale: en-US
+InstallerType: wix
+UpgradeBehavior: install
+ProductCode: '{07FA394E-FF1B-45D8-91B1-3B9865BC9F91}'
+ReleaseDate: "2024-01-04"
+AppsAndFeaturesEntries:
+- ProductCode: '{07FA394E-FF1B-45D8-91B1-3B9865BC9F91}'
+  UpgradeCode: '{63EE06C1-0030-59D7-A5AE-31B45FC8261A}'

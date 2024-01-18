@@ -1,0 +1,64 @@
+# Created using WinGet Automation (CLI)
+
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.5.0.schema.json
+
+PackageIdentifier: Brave.Brave.Nightly
+PackageVersion: 120.1.63.113
+Installers:
+- Architecture: x86
+  Scope: user
+  InstallerUrl: https://updates-cdn.bravesoftware.com/build/Brave-Browser-Nightly/x86-ni/win/120.1.63.113/brave_installer-ia32.exe
+  InstallerSha256: 6497f6e74b976e2c8fc6f592c0884170f1da733d78d4eaea4d038dd6cffd375b
+- Architecture: x86
+  Scope: machine
+  InstallerUrl: https://updates-cdn.bravesoftware.com/build/Brave-Browser-Nightly/x86-ni/win/120.1.63.113/brave_installer-ia32.exe
+  InstallerSha256: 6497f6e74b976e2c8fc6f592c0884170f1da733d78d4eaea4d038dd6cffd375b
+- Architecture: x64
+  Scope: user
+  InstallerUrl: https://updates-cdn.bravesoftware.com/build/Brave-Browser-Nightly/x64-ni/win/120.1.63.113/brave_installer-x64.exe
+  InstallerSha256: b2b12db2290ffa9c984a1f8b1e51b871af911329025044e67ba7a8583b088201
+- Architecture: x64
+  Scope: machine
+  InstallerUrl: https://updates-cdn.bravesoftware.com/build/Brave-Browser-Nightly/x64-ni/win/120.1.63.113/brave_installer-x64.exe
+  InstallerSha256: b2b12db2290ffa9c984a1f8b1e51b871af911329025044e67ba7a8583b088201
+- Architecture: arm64
+  Scope: user
+  InstallerUrl: https://updates-cdn.bravesoftware.com/build/Brave-Browser-Nightly/x64-ni/win/120.1.63.113/brave_installer-x64.exe
+  InstallerSha256: b2b12db2290ffa9c984a1f8b1e51b871af911329025044e67ba7a8583b088201
+- Architecture: arm64
+  Scope: machine
+  InstallerUrl: https://updates-cdn.bravesoftware.com/build/Brave-Browser-Nightly/x64-ni/win/120.1.63.113/brave_installer-x64.exe
+  InstallerSha256: b2b12db2290ffa9c984a1f8b1e51b871af911329025044e67ba7a8583b088201
+ManifestType: installer
+ManifestVersion: 1.5.0
+InstallerType: exe
+InstallModes:
+- silent
+InstallerSwitches:
+  Custom: --chrome-sxs --do-not-launch-chrome
+ExpectedReturnCodes:
+- InstallerReturnCode: 3
+  ReturnResponse: alreadyInstalled
+- InstallerReturnCode: 4
+  ReturnResponse: downgrade
+- InstallerReturnCode: 22
+  ReturnResponse: cancelledByUser
+- InstallerReturnCode: 60
+  ReturnResponse: installInProgress
+UpgradeBehavior: install
+Protocols:
+- ftp
+- http
+- https
+- mailto
+- tel
+FileExtensions:
+- htm
+- html
+- pdf
+- shtml
+- svg
+- webp
+- xht
+- xhtml
+ProductCode: BraveSoftware Brave-Browser-Nightly
