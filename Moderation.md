@@ -98,10 +98,12 @@ Moderators are often the first to see and triage new issues, and so they have th
 * `Needs-CLA`
 * `Needs-Manual-Merge`
 * `Network-Blocker`
-* `Portable-Tar`
+* `Portable-Archive`
 * `Scripted-Application`
 * `Windows-Features`
+* `Version-Parameter-Mismatch`
 * `Zip-Binary`
+* `PSA`
 
 > [!NOTE]
 >
@@ -109,7 +111,7 @@ Moderators are often the first to see and triage new issues, and so they have th
 >   * `Hardware`
 >   * `Interactive-Only-Installer`
 >   * `License-Blocks-Install`
->   * `Portable-Tar`
+>   * `Portable-Archive`
 >   * `Windows-Features`
 >   * `Zip-Binary`
 > * Adding `Needs-Attention` to a PR will automatically assign the repository maintainers
