@@ -15,6 +15,8 @@ LicenseUrl: https://github.com/msys2/msys2-installer/blob/main/LICENSE
 Copyright: Copyright 2024 MSYS2 devs
 ShortDescription: Software Distribution and Building Platform for Windows
 Description: MSYS2 is a collection of tools and libraries providing you with an easy-to-use environment for building, installing and running native Windows software.
+ReleaseNotes: '- The usual round of package updates'
+ReleaseNotesUrl: https://github.com/msys2/msys2-installer/releases/tag/2024-01-13
 Documentations:
 - DocumentLabel: Documentation
   DocumentUrl: https://www.msys2.org/docs/what-is-msys2/
