@@ -1,4 +1,4 @@
-# Created with YamlCreate.ps1 v2.4.1 Dumplings Mod $debug=QUSU.CRLF.7-4-2.Win32NT
+# Created with YamlCreate.ps1 v2.4.1 Dumplings Mod $debug=QUSU.CRLF.7-4-3.Win32NT
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.6.0.schema.json
 
 PackageIdentifier: EaseUS.PartitionMaster
@@ -26,7 +26,11 @@ Tags:
 - easeus
 - partition
 - system
-# ReleaseNotes:
+ReleaseNotes: |-
+  1. Support cloning the system from the second system disk;
+  2. Support conversion from FAT to ExFAT file system;
+  3. Improve UX;
+  4. Fix multiple known issues.
 # ReleaseNotesUrl:
 # PurchaseUrl:
 # InstallationNotes:

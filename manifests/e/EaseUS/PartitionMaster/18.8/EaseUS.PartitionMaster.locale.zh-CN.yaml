@@ -1,4 +1,4 @@
-# Created with YamlCreate.ps1 v2.4.1 Dumplings Mod $debug=QUSU.CRLF.7-4-2.Win32NT
+# Created with YamlCreate.ps1 v2.4.1 Dumplings Mod $debug=QUSU.CRLF.7-4-3.Win32NT
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.locale.1.6.0.schema.json
 
 PackageIdentifier: EaseUS.PartitionMaster
@@ -28,7 +28,11 @@ Tags:
 - 硬盘
 - 磁盘
 - 系统
-# ReleaseNotes:
+ReleaseNotes: |-
+  1. 支持从第二个系统盘克隆系统；
+  2. 支持从 FAT 到 ExFAT 文件系统的转换；
+  3. 改进用户体验；
+  4. 修复多个已知问题。
 # ReleaseNotesUrl:
 # PurchaseUrl:
 # InstallationNotes:
