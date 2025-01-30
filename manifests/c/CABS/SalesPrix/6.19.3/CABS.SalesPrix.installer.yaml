@@ -1,4 +1,4 @@
-# Automatically updated by the winget bot at 2024/Dec/21
+# Automatically updated by the winget bot at 2025/Jan/20
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.9.0.schema.json
 
 PackageIdentifier: CABS.SalesPrix
@@ -7,7 +7,7 @@ InstallerType: nullsoft
 Installers:
 - Architecture: x86
   InstallerUrl: https://www.scanprix.de/Setup/Setup_SalesPrix.exe
-  InstallerSha256: EA6509E2D72E5730ED0C986779A9BBA22A41098AC67ED36FFF9CF60C687E948A
+  InstallerSha256: E9EC4DA79A7913B477CB58F8FC9327F77CF398558E480D61104B55E50F7AF088
   AppsAndFeaturesEntries:
   - DisplayName: CABS-Deinstaller
     ProductCode: ScanPrix-Programme
