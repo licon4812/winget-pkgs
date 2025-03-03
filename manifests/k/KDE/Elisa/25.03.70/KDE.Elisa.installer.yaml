@@ -9,14 +9,14 @@ ProductCode: Elisa
 Installers:
 - Architecture: x64
   Scope: user
-  InstallerUrl: https://cdn.kde.org/ci-builds/multimedia/elisa/master/windows/elisa-master-3690-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 2358E12A08DA227E4AC24408B6B85B5C33F75327F08B86CDFC0DA8BBC1CAD530
+  InstallerUrl: https://cdn.kde.org/ci-builds/multimedia/elisa/master/windows/elisa-master-3712-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 67E2B4118694F050FE1C0C246CCF7F36B03184D3B2B216D30C779E128F75EA61
   InstallerSwitches:
     Custom: /CurrentUser
 - Architecture: x64
   Scope: machine
-  InstallerUrl: https://cdn.kde.org/ci-builds/multimedia/elisa/master/windows/elisa-master-3690-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 2358E12A08DA227E4AC24408B6B85B5C33F75327F08B86CDFC0DA8BBC1CAD530
+  InstallerUrl: https://cdn.kde.org/ci-builds/multimedia/elisa/master/windows/elisa-master-3712-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 67E2B4118694F050FE1C0C246CCF7F36B03184D3B2B216D30C779E128F75EA61
   InstallerSwitches:
     Custom: /AllUsers
 ManifestType: installer
