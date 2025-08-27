@@ -28,11 +28,11 @@ Tags:
 - 文件
 - 服务器
 ReleaseNotes: |-
-  1. 修复 115open 在个别情况下会下载失败，重启服务才能恢复的问题
-  2. 修复跨网盘转移到加密文件夹时，0 字节文件会转移失败的问题
-  3. 根据百度网盘开放平台 API 更新，修复百度网盘无法正确显示会员级别的问题
-  4. 其它 bug 修复和性能改进
-ReleaseNotesUrl: https://github.com/cloud-fs/cloud-fs.github.io/releases/tag/v0.8.18
+  1. 修复 macos 的 webdav 客户端和 0.9.7 版本 webdav 服务器的兼容性问题
+  2. 修复 0.9.7 在某些设备上无法监听 https 端口的问题
+  3. 修复复制任务不显示已跳过文件数的问题
+  4. 其它 bug 修复和界面优化
+ReleaseNotesUrl: https://github.com/cloud-fs/cloud-fs.github.io/releases/tag/v0.9.8
 PurchaseUrl: https://www.clouddrive2.com/pricing.html
 ManifestType: locale
 ManifestVersion: 1.10.0
