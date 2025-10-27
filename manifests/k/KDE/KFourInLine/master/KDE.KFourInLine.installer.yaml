@@ -9,14 +9,14 @@ ProductCode: kfourinline
 Installers:
 - Architecture: x64
   Scope: user
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/kfourinline/master/windows/kfourinline-master-772-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: F55AB3B58BE6D2AC3046FC1FE4734173F460A1B128938E7186426E10B44AB536
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/kfourinline/master/windows/kfourinline-master-799-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: BF46AB04F5C0C548ADA328DB1C613B0B6837A35DC3C39339EC66C43DD63C4051
   InstallerSwitches:
     Custom: /CurrentUser
 - Architecture: x64
   Scope: machine
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/kfourinline/master/windows/kfourinline-master-772-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: F55AB3B58BE6D2AC3046FC1FE4734173F460A1B128938E7186426E10B44AB536
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/kfourinline/master/windows/kfourinline-master-799-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: BF46AB04F5C0C548ADA328DB1C613B0B6837A35DC3C39339EC66C43DD63C4051
   InstallerSwitches:
     Custom: /AllUsers
 ManifestType: installer
