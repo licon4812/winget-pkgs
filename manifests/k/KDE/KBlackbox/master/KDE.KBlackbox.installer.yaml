@@ -9,14 +9,14 @@ ProductCode: kblackbox
 Installers:
 - Architecture: x64
   Scope: user
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/kblackbox/master/windows/kblackbox-master-750-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: CE3E9A2A3FED78653192AA30FA75FF8AE11C868E71FC333052D981FA93ABAF4C
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/kblackbox/master/windows/kblackbox-master-784-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 782B6B180F4217325C71E8044281E829792EA42B4E1AFAA6E07BA1961BE6B112
   InstallerSwitches:
     Custom: /CurrentUser
 - Architecture: x64
   Scope: machine
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/kblackbox/master/windows/kblackbox-master-750-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: CE3E9A2A3FED78653192AA30FA75FF8AE11C868E71FC333052D981FA93ABAF4C
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/kblackbox/master/windows/kblackbox-master-784-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 782B6B180F4217325C71E8044281E829792EA42B4E1AFAA6E07BA1961BE6B112
   InstallerSwitches:
     Custom: /AllUsers
 ManifestType: installer
