@@ -6,17 +6,18 @@ PackageVersion: master
 InstallerType: nullsoft
 UpgradeBehavior: install
 ProductCode: kspaceduel
+ReleaseDate: 2026-07-22
 Installers:
 - Architecture: x64
   Scope: user
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/kspaceduel/master/windows/kspaceduel-master-742-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 16B4B265B092A254446D65102EFAC3F4C433E478F5ABDBD88BE6EF907CFF00B9
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/kspaceduel/master/windows/kspaceduel-master-807-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 55C84DE43D785041EFE238AFF4AAC3BFFEEF0FA1DA19BE67DC07F2E5A6846334
   InstallerSwitches:
     Custom: /CurrentUser
 - Architecture: x64
   Scope: machine
-  InstallerUrl: https://cdn.kde.org/ci-builds/games/kspaceduel/master/windows/kspaceduel-master-742-windows-cl-msvc2022-x86_64.exe
-  InstallerSha256: 16B4B265B092A254446D65102EFAC3F4C433E478F5ABDBD88BE6EF907CFF00B9
+  InstallerUrl: https://cdn.kde.org/ci-builds/games/kspaceduel/master/windows/kspaceduel-master-807-windows-cl-msvc2022-x86_64.exe
+  InstallerSha256: 55C84DE43D785041EFE238AFF4AAC3BFFEEF0FA1DA19BE67DC07F2E5A6846334
   InstallerSwitches:
     Custom: /AllUsers
 ManifestType: installer
